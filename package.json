@@ -5,7 +5,8 @@
   "main": "benchmark.js",
   "type": "module",
   "scripts": {
-    "start": "node benchmark.js"
+    "benchmark1": "node benchmark.js ./data/HPI_master.csv",
+    "benchmark2": "node benchmark.js ./data/large-dataset.csv"
   },
   "author": "Jos d eJong",
   "license": "ISC",

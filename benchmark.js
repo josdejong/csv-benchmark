@@ -5,8 +5,10 @@ import Papa from 'papaparse'
 import { csv2json } from 'csv42'
 import { transform } from './utils/transform.js'
 
-const data = String(readFileSync('./data/HPI_master.csv'))
+const filename = process.argv[2]
+console.log('filename', filename)
 
+const data = String(readFileSync(filename))
 console.log('data:\n' + data.slice(0, 1000) + '...')
 
 // print the output of the CSV libraries to make sure they output what we expect
