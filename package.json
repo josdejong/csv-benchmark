@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "benchmark1": "node benchmark.js ./data/HPI_master.csv",
-    "benchmark2": "node benchmark.js ./data/large-dataset.csv"
+    "benchmark2": "node benchmark.js ./data/large-dataset.csv",
+    "benchmark3": "node litmus_gen.cjs && node benchmark.js ./data/litmus_ints.csv",
+    "benchmark4": "node litmus_gen.cjs && node benchmark.js ./data/litmus_quoted.csv",
+    "benchmark5": "node litmus_gen.cjs && node benchmark.js ./data/litmus_strings.csv"
   },
   "author": "Jos d eJong",
   "license": "ISC",
