@@ -55,13 +55,15 @@ papaparse x 12.53 ops/sec ±2.65% (36 runs sampled)
 Output of `benchmark-nested-objects` (10k):
 
 ```
-udsv x 67.36 ops/sec ±3.34% (71 runs sampled)
-csv42 x 25.01 ops/sec ±0.47% (45 runs sampled)
+udsv x 69.21 ops/sec ±2.48% (72 runs sampled)
+csv42 x 25.04 ops/sec ±0.56% (45 runs sampled)
+papaparse+flat x 7.41 ops/sec ±3.44% (23 runs sampled)
 ```
 
 Output of `benchmark-nested-objects` (100k):
 
 ```
-udsv x 5.58 ops/sec ±4.11% (18 runs sampled)
-csv42 x 2.23 ops/sec ±4.31% (10 runs sampled)
+udsv x 5.34 ops/sec ±4.84% (18 runs sampled)
+csv42 x 2.10 ops/sec ±3.39% (10 runs sampled)
+papaparse+flat x 0.78 ops/sec ±2.03% (6 runs sampled)
 ```
