@@ -15,3 +15,18 @@ new Benchmark.Suite('parse CSV into nested objects')
   .add('papaparse+flat', () => usePapaParseDeep(data))
   .on('cycle', (event) => console.log(String(event.target)))
   .run()
+
+console.log()
+console.log('Ballpark test with console.time:')
+
+// get a rough feel, see if that compares
+console.time('udsv')
+useUdsvDeep(data)
+console.timeEnd('udsv')
+
+console.time('csv42')
+useCsv42(data)
+console.timeEnd('csv42')
+console.time('papaparse+flat')
+usePapaParseDeep(data)
+console.timeEnd('papaparse+flat')

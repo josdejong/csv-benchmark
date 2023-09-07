@@ -55,15 +55,25 @@ papaparse x 12.53 ops/sec ±2.65% (36 runs sampled)
 Output of `benchmark-nested-objects` (10k):
 
 ```
-udsv x 69.21 ops/sec ±2.48% (72 runs sampled)
-csv42 x 25.04 ops/sec ±0.56% (45 runs sampled)
-papaparse+flat x 7.41 ops/sec ±3.44% (23 runs sampled)
+udsv x 69.26 ops/sec ±2.36% (72 runs sampled)
+csv42 x 25.09 ops/sec ±0.51% (45 runs sampled)
+papaparse+flat x 7.36 ops/sec ±3.61% (23 runs sampled)
+
+Ballpark test with console.time:
+udsv: 24.327ms
+csv42: 42.651ms
+papaparse+flat: 125.212ms
 ```
 
 Output of `benchmark-nested-objects` (100k):
 
 ```
-udsv x 5.34 ops/sec ±4.84% (18 runs sampled)
-csv42 x 2.10 ops/sec ±3.39% (10 runs sampled)
-papaparse+flat x 0.78 ops/sec ±2.03% (6 runs sampled)
+udsv x 5.44 ops/sec ±4.86% (18 runs sampled)
+csv42 x 2.19 ops/sec ±3.33% (10 runs sampled)
+papaparse+flat x 0.79 ops/sec ±2.87% (6 runs sampled)
+
+Ballpark test with console.time:
+udsv: 177.257ms
+csv42: 437.575ms
+papaparse+flat: 1.306s
 ```
