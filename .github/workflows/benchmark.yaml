@@ -1,0 +1,45 @@
+name: CSV Benchmark
+
+on:
+  push:
+    branches:
+      - '*'
+    tags:
+  pull_request:
+
+jobs:
+  benchmark-nested-objects:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run benchmark-nested-objects.js
+        env:
+          CI: true
+
+  benchmark-custom:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run benchmark-custom.js
+        env:
+          CI: true
