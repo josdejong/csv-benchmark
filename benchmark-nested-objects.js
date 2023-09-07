@@ -8,7 +8,7 @@ const data = generateNestedCsv(10_000)
 // print the output of the CSV libraries to make sure they output what we expect
 console.log('udsv output:', useUdsvDeep(data).slice(0, 1))
 console.log('csv42 output:', useCsv42(data).slice(0, 1))
-console.log('papaparse+flat output:', useCsv42(data).slice(0, 1))
+console.log('papaparse+flat output:', usePapaParseDeep(data).slice(0, 1))
 
 // test with benchmark.js
 console.log('test with benchmark.js')
