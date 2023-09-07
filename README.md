@@ -55,25 +55,45 @@ papaparse x 12.53 ops/sec ±2.65% (36 runs sampled)
 Output of `benchmark-nested-objects` (10k):
 
 ```
-udsv x 69.26 ops/sec ±2.36% (72 runs sampled)
-csv42 x 25.09 ops/sec ±0.51% (45 runs sampled)
-papaparse+flat x 7.36 ops/sec ±3.61% (23 runs sampled)
+test with benchmark.js
+udsv x 69.02 ops/sec ±2.22% (72 runs sampled)
+csv42 x 25.13 ops/sec ±0.61% (45 runs sampled)
+papaparse+flat x 7.45 ops/sec ±3.86% (23 runs sampled)
 
 Ballpark test with console.time:
-udsv: 24.327ms
-csv42: 42.651ms
-papaparse+flat: 125.212ms
+udsv: 22.796ms
+csv42: 40.789ms
+papaparse+flat: 125.207ms
+
+test with tinybench
+┌─────────┬──────────────────┬─────────┬────────────────────┬──────────┬─────────┐
+│ (index) │    Task Name     │ ops/sec │ Average Time (ns)  │  Margin  │ Samples │
+├─────────┼──────────────────┼─────────┼────────────────────┼──────────┼─────────┤
+│    0    │      'udsv'      │  '66'   │ 15095203.010659471 │ '±3.81%' │   133   │
+│    1    │     'csv42'      │  '25'   │ 39896554.90950043  │ '±0.90%' │   51    │
+│    2    │ 'papaparse+flat' │   '7'   │ 132883587.47959137 │ '±3.46%' │   16    │
+└─────────┴──────────────────┴─────────┴────────────────────┴──────────┴─────────┘
 ```
 
 Output of `benchmark-nested-objects` (100k):
 
 ```
-udsv x 5.44 ops/sec ±4.86% (18 runs sampled)
-csv42 x 2.19 ops/sec ±3.33% (10 runs sampled)
-papaparse+flat x 0.79 ops/sec ±2.87% (6 runs sampled)
+test with benchmark.js
+udsv x 5.56 ops/sec ±4.50% (18 runs sampled)
+csv42 x 2.27 ops/sec ±1.80% (10 runs sampled)
+papaparse+flat x 0.78 ops/sec ±3.62% (6 runs sampled)
 
 Ballpark test with console.time:
-udsv: 177.257ms
-csv42: 437.575ms
-papaparse+flat: 1.306s
+udsv: 171.536ms
+csv42: 457.151ms
+papaparse+flat: 1.326s
+
+test with tinybench
+┌─────────┬──────────────────┬─────────┬────────────────────┬──────────┬─────────┐
+│ (index) │    Task Name     │ ops/sec │ Average Time (ns)  │  Margin  │ Samples │
+├─────────┼──────────────────┼─────────┼────────────────────┼──────────┼─────────┤
+│    0    │      'udsv'      │   '5'   │ 182387227.2751548  │ '±7.31%' │   11    │
+│    1    │     'csv42'      │   '2'   │ 442925740.0274277  │ '±2.98%' │   10    │
+│    2    │ 'papaparse+flat' │   '0'   │ 1268578240.0131226 │ '±1.56%' │   10    │
+└─────────┴──────────────────┴─────────┴────────────────────┴──────────┴─────────┘
 ```
