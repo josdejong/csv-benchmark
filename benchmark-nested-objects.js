@@ -40,9 +40,19 @@ console.log()
 console.log('test with tinybench')
 const bench = new Bench({ time: 2000 })
 await bench
-  .add('udsv', () => useUdsvDeep(data))
-  .add('csv42', () => useCsv42(data))
-  .add('papaparse+flat', () => usePapaParseDeep(data))
+  .add('udsv', () => useUdsvDeep(data), { beforeEach })
+  .add('csv42', () => useCsv42(data), { beforeEach })
+  .add('papaparse+flat', () => usePapaParseDeep(data), { beforeEach })
   .run()
 
 console.table(bench.table())
+
+function beforeEach() {
+  // sleep between every test to allow the garbage compiler to free memory
+  // (does this work?)
+  return sleep(100)
+}
+
+function sleep(delay) {
+  return new Promise(resolve => setTimeout(resolve, delay))
+}
