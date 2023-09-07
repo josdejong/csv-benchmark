@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: npm run benchmark-nested-objects.js
+      - run: npm run benchmark-nested-objects
         env:
           CI: true
 
@@ -40,6 +40,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: npm run benchmark-custom.js
+      - run: npm run benchmark-custom
         env:
           CI: true
