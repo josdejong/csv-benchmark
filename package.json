@@ -10,7 +10,7 @@
     "benchmark3": "node litmus_gen.cjs && node benchmark.js ./data/litmus_ints.csv",
     "benchmark4": "node litmus_gen.cjs && node benchmark.js ./data/litmus_quoted.csv",
     "benchmark5": "node litmus_gen.cjs && node benchmark.js ./data/litmus_strings.csv",
-    "benchmark-nested-objects": "node benchmark-nested-objects.js",
+    "benchmark-nested-objects": "node benchmark-nested-objects",
     "benchmark-custom": "node benchmark-custom.js"
   },
   "author": "Jos de Jong",
